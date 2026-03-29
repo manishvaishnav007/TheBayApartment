@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Bay Apartment | Modern Living</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; -webkit-tap-highlight-color: transparent; }
+        .fade-in { animation: fadeIn 0.8s ease-out forwards; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        /* Optimized for mobile scrolling */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 scroll-smooth overflow-x-hidden">
+
+    <!-- Hero Section (Mobile Optimized) -->
+    <header class="relative h-[90vh] md:h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <!-- Cover Page: Lobby -->
+            <img id="hero-img" src="https://lh3.googleusercontent.com/d/174q9b-QZTwX6j77RjMZY-SxblFIxpIaz" alt="Lobby" class="w-full h-full object-cover brightness-[0.55] transition-transform duration-1000 scale-105" onerror="this.src='https://images.unsplash.com/photo-1586023494580-2fb1457d1850?q=80&w=1200'">
+        </div>
+        
+        <div class="relative z-10 text-center px-6 max-w-4xl fade-in">
+            <div class="flex items-center justify-center gap-2 text-emerald-400 mb-4 font-semibold tracking-widest uppercase text-[10px] md:text-xs">
+                <i data-lucide="map-pin" class="w-3 h-3 md:w-4 md:h-4"></i>
+                Premier Living in Lampung
+            </div>
+            <h1 class="text-4xl md:text-7xl font-extrabold text-white mb-6 leading-tight drop-shadow-2xl">
+                Modern Apartment in Prime Location
+            </h1>
+            <p class="text-lg md:text-2xl text-slate-200 mb-10 max-w-xl mx-auto font-light leading-relaxed">
+                Comfort, convenience, and lifestyle in one place.
+            </p>
+            <a href="https://wa.me/6591682423?text=Hi! I would like to book for a weekend stay or a long term stay." target="_blank" class="inline-flex items-center gap-3 bg-[#25D366] hover:bg-[#128C7E] text-white px-8 py-4 rounded-full font-bold transition-all shadow-xl hover:scale-105 active:scale-95 text-base md:text-lg">
+                <i data-lucide="message-circle" class="w-5 h-5 md:w-6 md:h-6"></i>
+                Book your stay
+            </a>
+        </div>
+    </header>
+
+    <!-- Amenities Grid (Horizontal scroll on mobile) -->
+    <section class="relative z-20 -mt-12 px-4 md:px-0 max-w-6xl mx-auto">
+        <div class="bg-white p-6 md:p-10 rounded-[2rem] shadow-xl overflow-x-auto no-scrollbar">
+            <div class="flex md:grid md:grid-cols-6 gap-6 md:gap-8 min-w-max md:min-w-0">
+                <div class="flex flex-col items-center text-center gap-2 w-20 md:w-auto">
+                    <div class="p-3 bg-emerald-50 text-emerald-600 rounded-xl"><i data-lucide="waves" class="w-5 h-5"></i></div>
+                    <span class="text-[9px] font-bold uppercase tracking-wider text-slate-500">Pool</span>
+                </div>
+                <div class="flex flex-col items-center text-center gap-2 w-20 md:w-auto">
+                    <div class="p-3 bg-emerald-50 text-emerald-600 rounded-xl"><i data-lucide="dumbbell" class="w-5 h-5"></i></div>
+                    <span class="text-[9px] font-bold uppercase tracking-wider text-slate-500">Gym</span>
+                </div>
+                <div class="flex flex-col items-center text-center gap-2 w-20 md:w-auto">
+                    <div class="p-3 bg-emerald-50 text-emerald-600 rounded-xl"><i data-lucide="wind" class="w-5 h-5"></i></div>
+                    <span class="text-[9px] font-bold uppercase tracking-wider text-slate-500">Full AC</span>
+                </div>
+                <div class="flex flex-col items-center text-center gap-2 w-20 md:w-auto">
+                    <div class="p-3 bg-emerald-50 text-emerald-600 rounded-xl"><i data-lucide="wifi" class="w-5 h-5"></i></div>
+                    <span class="text-[9px] font-bold uppercase tracking-wider text-slate-500">WIFI</span>
+                </div>
+                <div class="flex flex-col items-center text-center gap-2 w-20 md:w-auto">
+                    <div class="p-3 bg-emerald-50 text-emerald-600 rounded-xl"><i data-lucide="car" class="w-5 h-5"></i></div>
+                    <span class="text-[9px] font-bold uppercase tracking-wider text-slate-500">Parking</span>
+                </div>
+                <div class="flex flex-col items-center text-center gap-2 w-20 md:w-auto">
+                    <div class="p-3 bg-emerald-50 text-emerald-600 rounded-xl"><i data-lucide="shopping-bag" class="w-5 h-5"></i></div>
+                    <span class="text-[9px] font-bold uppercase tracking-wider text-slate-500">Mall</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery (Single column on mobile) -->
+    <section class="py-16 md:py-24 px-4 md:px-6 max-w-7xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold mb-8 md:mb-12 text-center md:text-left">Exquisite Spaces</h2>
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-5" id="gallery">
+            <!-- Images are injected via JS -->
+        </div>
+    </section>
+
+    <!-- Mobile-First Features Section -->
+    <section class="bg-slate-900 py-20 md:py-32 text-white">
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-3xl md:text-6xl font-bold mb-8 leading-tight">Elevated Living, <br>Unmatched Ease.</h2>
+                <ul class="space-y-6">
+                    <li class="flex gap-4 items-start">
+                        <div class="w-2 h-2 rounded-full bg-emerald-400 mt-2 shrink-0"></div>
+                        <p class="text-lg text-slate-300 font-light">Direct access to shopping and dining at Lampung City Mall.</p>
+                    </li>
+                    <li class="flex gap-4 items-start">
+                        <div class="w-2 h-2 rounded-full bg-emerald-400 mt-2 shrink-0"></div>
+                        <p class="text-lg text-slate-300 font-light">Access to premium swimming pool and gym facilities.</p>
+                    </li>
+                    <li class="flex gap-4 items-start">
+                        <div class="w-2 h-2 rounded-full bg-emerald-400 mt-2 shrink-0"></div>
+                        <p class="text-lg text-slate-300 font-light">Stay connected with WIFI and air-conditioning in every room.</p>
+                    </li>
+                    <li class="flex gap-4 items-start">
+                        <div class="w-2 h-2 rounded-full bg-emerald-400 mt-2 shrink-0"></div>
+                        <p class="text-lg text-slate-300 font-light">Paid parking available for residents and guests.</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="rounded-[2rem] overflow-hidden shadow-2xl md:rotate-3 transition-transform hover:rotate-0 duration-500">
+                <!-- Image 8: Outside View -->
+                <img src="https://lh3.googleusercontent.com/d/1sbIM2Sm7jksilmLtsdP3Q_N2FD1jjXJ4" alt="Outside View" class="w-full h-full object-cover">
+            </div>
+        </div>
+    </section>
+
+    <!-- Simple Footer (Mobile Focused CTA) -->
+    <footer class="py-16 text-center bg-white border-t border-slate-100 px-6">
+        <h2 class="text-3xl font-bold mb-6 text-slate-900 leading-tight">Ready to book your stay?</h2>
+        <a href="https://wa.me/6591682423?text=Hi! I would like to book for a weekend stay or a long term stay." target="_blank" class="w-full md:w-auto inline-flex items-center justify-center gap-3 bg-[#25D366] text-white px-8 py-5 rounded-full font-bold shadow-lg text-lg">
+            <i data-lucide="message-circle" class="w-6 h-6"></i>
+            Message on WhatsApp
+        </a>
+        <div class="mt-16 text-slate-400 text-[10px] font-bold uppercase tracking-[0.2em]">
+            Managed by Pris • The Bay Apartment
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 bg-black/98 z-[100] hidden flex items-center justify-center p-4 cursor-pointer backdrop-blur-sm">
+        <button class="absolute top-6 right-6 text-white/60 hover:text-white" onclick="document.getElementById('lightbox').classList.add('hidden')">
+            <i data-lucide="x" class="w-8 h-8"></i>
+        </button>
+        <img id="lightbox-img" src="" class="max-w-full max-h-[80vh] rounded-lg shadow-2xl transition-all duration-300">
+        <div id="lightbox-caption" class="absolute bottom-10 text-white font-medium text-lg bg-black/40 px-6 py-2 rounded-full"></div>
+    </div>
+
+    <script>
+        // Initializing Icons
+        lucide.createIcons();
+
+        const base = "https://lh3.googleusercontent.com/d/";
+        
+        // Updated images array based on your specific positions and captions
+        const images = [
+            { src: base + '1ust5UsPoMJz7Hlkg6tTSFYaffoMDI9MD', title: '1st Bedroom View 1', pos: 'Image 1', cols: 'md:col-span-12' },
+            { src: base + '1CLPxITxCuPe7UpAEqVqAcbrgmx8U0Vjn', title: '2nd Bedroom View 1', pos: 'Image 2', cols: 'md:col-span-6' },
+            { src: base + '1-eBxITVPPJNLpJejUUBc-v3b9WY3mV0r', title: '2nd Bedroom View 2', pos: 'Image 3', cols: 'md:col-span-6' },
+            { src: base + '1BmGBBX42H21mpcU8qz6m12D8M24uQThZ', title: 'Kitchen', pos: 'Image 4', cols: 'md:col-span-4' },
+            { src: base + '1SGIhjI5nBHVb38hsRZq-XYxWu0MreX0F', title: 'Living Room (View 1)', pos: 'Image 5', cols: 'md:col-span-8' },
+            { src: base + '1ds5jiHXl1VkpahuwtFqTfnxRlmuV6DsH', title: 'Living Room (View 2)', pos: 'Image 6', cols: 'md:col-span-12' },
+            { src: base + '1Jyg2CQu9jPtJNk2zfg97mETZ30EmgchM', title: 'Lobby Entrance', pos: 'Image 7', cols: 'md:col-span-6' },
+            { src: base + '1sbIM2Sm7jksilmLtsdP3Q_N2FD1jjXJ4', title: 'Outside View', pos: 'Image 8', cols: 'md:col-span-6' },
+            { src: base + '1qKOlNFZXT46Txunvur_VjL55VanveHGW', title: 'Swimming Pool', pos: 'Image 9', cols: 'md:col-span-12' },
+            { src: base + '14fnEbj-eqv_tiQQqIaPlf8jQNIRXqyha', title: 'Balcony', pos: 'Image 10', cols: 'md:col-span-12' }
+        ];
+
+        const gallery = document.getElementById('gallery');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxCaption = document.getElementById('lightbox-caption');
+
+        // Populate Gallery
+        images.forEach((img) => {
+            const div = document.createElement('div');
+            // Defaulting to full width on mobile (no md prefix), then using your cols for desktop (md prefix)
+            div.className = `${img.cols} min-h-[250px] relative group overflow-hidden rounded-[1.5rem] md:rounded-[2rem] cursor-pointer shadow-sm hover:shadow-xl transition-all bg-slate-200`;
+            div.innerHTML = `
+                <img src="${img.src}" alt="${img.title}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                    onerror="this.src='https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=600'">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
+                    <p class="text-white font-bold text-sm md:text-lg">${img.title}</p>
+                </div>
+            `;
+            div.onclick = () => {
+                lightboxImg.src = img.src;
+                lightboxCaption.innerText = img.title;
+                lightbox.classList.remove('hidden');
+            };
+            gallery.appendChild(div);
+        });
+
+        // Close lightbox
+        lightbox.onclick = (e) => {
+            if (e.target !== lightboxImg) {
+                lightbox.classList.add('hidden');
+            }
+        };
+    </script>
+</body>
+</html>
